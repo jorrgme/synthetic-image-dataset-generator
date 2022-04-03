@@ -15,7 +15,6 @@ def process_videos(videos_source: str,
     """
     for video_file in glob(videos_source + f'/*.{video_format}'):
         print(f'--- Processing video file: {video_file}')
-        video_name = video_file.split("/")[-1].split(".")[0]
         act_dir = video_file.split("/")[:-1]
         act_dir = "/".join(act_dir)
         results_dir = act_dir + "/" + results_file
